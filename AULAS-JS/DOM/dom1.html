@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Javascript DOM</title>
+        <meta charset="utf-8">
+    </head>
+    
+    <body>
+         <h1>DOM</h1>
+          
+         <input type="text" id="txtNome" value="digite seu nome"> 
+         <button onclick="escreve()">Só Clicar</button>
+
+         <div id="msg">
+             
+         </div>
+    </body>
+<script>
+
+         let txtNome2 = document.querySelector("#txtNome");
+        
+        
+        function escreve (){
+            let nome = txtNome2.value
+            //  document.getElementById("nome do id")//POSSO FAZER DESSAS 2 FORMAS
+            document.querySelector("#msg").innerHTML = "Bem Vindo <b> " + nome + "</b>";
+        }
+
+</script>
+</html> 
+
+

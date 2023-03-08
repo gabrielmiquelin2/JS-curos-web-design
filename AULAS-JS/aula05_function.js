@@ -32,11 +32,35 @@
 
 //////////////////////////////////////////////////////////////////////////////
 
-let x = 0;
-function mostrarX(){
-  let x = 10;//não conflita com outras variaves q estão fora da function, MAS SE EU TIRAR O "let" O JS VAI ENTENDER QUE EU ATRIBUI UM NOVO VALOR
-  console.log(`Mostrar x: ${x}`)
-}
+// let x = 0;
+// let y;
+// function mostrarX(){
+//   let x = 10;//não conflita com outras variaves q estão fora da function, MAS SE EU TIRAR O "let" O JS VAI ENTENDER QUE EU ATRIBUI UM NOVO VALOR
+//   let y = 20;
+//   console.log(`Mostrar x: ${x}`)
+//   console.log(`Mostrar y: ${y}`)
+// }
 
-mostrarX()
-console.log(`Mostrar x: ${x}`)
+// mostrarX()
+// console.log(`Mostrar x: ${x}`)
+// console.log(`Mostrar y: ${y}`)
+
+//IIFE  FUNÇÂO AUTO INVOCÁVEL
+(function (){
+    let isValid = false
+
+    function somar (){
+      console.log(arguments);//representa todos os valores que foram passado pelos parametros passados
+      let result
+      let x  = 0;
+      while(arguments [x]){
+        result += arguments[x]
+        // result = result + arguments[x]//mesma cois do decima
+        x++
+        //ou
+        //x = x + 1;
+      }
+       console.log(`result: ${result}`)   
+    }
+    somar([10,20,51])//passo os valores do array
+})()
