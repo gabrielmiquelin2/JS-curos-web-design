@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tarefas</title>
+
+  <style>
+       .done{
+        text-decoration: line-through;
+        color: #555;
+       }
+  </style>
+</head>
+<body>
+<!--   
+  Fazer uma pequena lista de tarefas onde o
+  usuario pode acrescentar um novo item (li) na
+  lista (ul) através de um input e um botdo. Esta
+  lista deve estar preenchida previamente com
+  trés itens quaisquer.
+  Acrescentar eventos de click em cada li para marcar como feito -->
+   
+   <input type="text" id="txtTask"><br>
+   <button id="btn">
+    Cadastrar Tarefa
+   </button>
+   <ul>
+     <li>Estudar JavaScript</li>
+     <li>Estudar NodeJS</li>
+     <li>Consumir API rest</li>
+   </ul>
+
+  <script src="listaTarefa2.js"></script>
+</body>
+</html>
