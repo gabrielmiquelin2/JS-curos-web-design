@@ -10,6 +10,13 @@
               x = x + 1
         }
            
-        return total / qtd;
+        return (total / qtd).toFixed(2);
   }
 
+function sortear (n){
+      let _n = n  || 1;
+      let nSorteado = Math.random();
+      nSorteado = nSorteado * n;
+      nSorteado = Math.floor(nSorteado)//Para arredondar o número
+      return nSorteado
+}
