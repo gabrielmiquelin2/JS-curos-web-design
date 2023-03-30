@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos no BOM</title>
+</head>
+<body>
+  <h1>BOM  "Browser Object Model" (Modelo de Objetos do Navegador)</h1>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi inventore pariatur exercitationem, quae magni nobis magnam illum labore delectus provident nemo dolorum non rerum laboriosam veniam vel esse itaque eum?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi inventore pariatur exercitationem, quae magni nobis magnam illum labore delectus provident nemo dolorum non rerum laboriosam veniam vel esse itaque eum?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi inventore pariatur exercitationem, quae magni nobis magnam illum labore delectus provident nemo dolorum non rerum laboriosam veniam vel esse itaque eum?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi inventore pariatur exercitationem, quae magni nobis magnam illum labore delectus provident nemo dolorum non rerum laboriosam veniam vel esse itaque eum?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi inventore pariatur exercitationem, quae magni nobis magnam illum labore delectus provident nemo dolorum non rerum laboriosam veniam vel esse itaque eum?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi inventore pariatur exercitationem, quae magni nobis magnam illum labore delectus provident nemo dolorum non rerum laboriosam veniam vel esse itaque eum?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi inventore pariatur exercitationem, quae magni nobis magnam illum labore delectus provident nemo dolorum non rerum laboriosam veniam vel esse itaque eum?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi inventore pariatur exercitationem, quae magni nobis magnam illum labore delectus provident nemo dolorum non rerum laboriosam veniam vel esse itaque eum?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi inventore pariatur exercitationem, quae magni nobis magnam illum labore delectus provident nemo dolorum non rerum laboriosam veniam vel esse itaque eum?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi inventore pariatur exercitationem, quae magni nobis magnam illum labore delectus provident nemo dolorum non rerum laboriosam veniam vel esse itaque eum?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi inventore pariatur exercitationem, quae magni nobis magnam illum labore delectus provident nemo dolorum non rerum laboriosam veniam vel esse itaque eum?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi inventore pariatur exercitationem, quae magni nobis magnam illum labore delectus provident nemo dolorum non rerum laboriosam veniam vel esse itaque eum?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi inventore pariatur exercitationem, quae magni nobis magnam illum labore delectus provident nemo dolorum non rerum laboriosam veniam vel esse itaque eum?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi inventore pariatur exercitationem, quae magni nobis magnam illum labore delectus provident nemo dolorum non rerum laboriosam veniam vel esse itaque eum?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi inventore pariatur exercitationem, quae magni nobis magnam illum labore delectus provident nemo dolorum non rerum laboriosam veniam vel esse itaque eum?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi inventore pariatur exercitationem, quae magni nobis magnam illum labore delectus provident nemo dolorum non rerum laboriosam veniam vel esse itaque eum?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi inventore pariatur exercitationem, quae magni nobis magnam illum labore delectus provident nemo dolorum non rerum laboriosam veniam vel esse itaque eum?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi inventore pariatur exercitationem, quae magni nobis magnam illum labore delectus provident nemo dolorum non rerum laboriosam veniam vel esse itaque eum?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi inventore pariatur exercitationem, quae magni nobis magnam illum labore delectus provident nemo dolorum non rerum laboriosam veniam vel esse itaque eum?</p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi inventore pariatur exercitationem, quae magni nobis magnam illum labore delectus provident nemo dolorum non rerum laboriosam veniam vel esse itaque eum?</p>
+
+  <script>
+      window.addEventListener("load", function(){
+        console.log("load disparado")
+      }) // evento é "load", que é acionado quando a página é completamente carregada. Nesse caso, é adicionado um listener que imprime uma mensagem no console.
+
+      window.addEventListener("DomContentLoaded", function(){
+        console.log("load disparado")
+      })//evento é "DOMContentLoaded", que é acionado quando o DOM da página é completamente carregado, sem esperar por imagens e outros recursos. Nesse caso, é adicionado um listener que imprime uma mensagem no console.
+
+
+      window.addEventListener("risize", function(e){
+        console.log("resize disparado")
+        console.log(e)
+      })//evento é "resize", que é acionado quando a janela do navegador é redimensionada. Nesse caso, é adicionado um listener que imprime mensagens no console, incluindo informações do evento (parâmetro "e") e a posição Y da página (pageYOffset).
+
+      window.addEventListener("scroll", function(e){
+        console.log("scroll disparado")
+        console.log(e)
+        console.log("scroll Y", pageYOffset)
+      })// evento é "scroll", que é acionado quando o usuário faz rolagem na página. Nesse caso, é adicionado um listener que imprime mensagens no console, incluindo informações do evento (parâmetro "e") e a posição Y da página (pageYOffset).
+
+      window.addEventListener("unload", function(){
+        console.log("unload disparado")
+      })// evento é "unload", que é acionado quando a página é descarregada. Nesse caso, é adicionado um listener que imprime uma mensagem no console.
+
+      window.addEventListener("beforeunload", function(){
+        console.log("beforeunload disparado")//evento é "beforeunload", que é acionado quando a página está prestes a ser descarregada. Nesse caso, é adicionado um listener que imprime uma mensagem no console.   
+      })
+  </script>
+</body>
+</html>
