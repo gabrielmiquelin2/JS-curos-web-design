@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+     .teste{
+      background: red;
+     }
+  </style>
+</head>
+<body>
+   <div class="teste" style="background: red;">TESTE</div>
+
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum architecto adipisci voluptatum, iste pariatur voluptatem odit aut itaque a vitae obcaecati mollitia recusandae dolorem quo hic magnam beatae soluta facilis.
+   Quidem iure maiores mollitia unde repellat quis deleniti, corrupti veritatis quam omnis iste obcaecati soluta magnam ullam optio eligendi beatae. Odit illum quod atque tenetur expedita cumque a, accusamus ex.
+   Optio itaque quasi veniam error autem. </p>
+
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eius nesciunt nulla ut deserunt quisquam est iure, itaque in maiores magni ipsum, consectetur ratione? Voluptatum, possimus? Reprehenderit magni delectus iusto!</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eius nesciunt nulla ut deserunt quisquam est iure, itaque in maiores magni ipsum, consectetur ratione? Voluptatum, possimus? Reprehenderit magni delectus iusto!</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eius nesciunt nulla ut deserunt quisquam est iure, itaque in maiores magni ipsum, consectetur ratione? Voluptatum, possimus? Reprehenderit magni delectus iusto!</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eius nesciunt nulla ut deserunt quisquam est iure, itaque in maiores magni ipsum, consectetur ratione? Voluptatum, possimus? Reprehenderit magni delectus iusto!</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eius nesciunt nulla ut deserunt quisquam est iure, itaque in maiores magni ipsum, consectetur ratione? Voluptatum, possimus? Reprehenderit magni delectus iusto!</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eius nesciunt nulla ut deserunt quisquam est iure, itaque in maiores magni ipsum, consectetur ratione? Voluptatum, possimus? Reprehenderit magni delectus iusto!</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eius nesciunt nulla ut deserunt quisquam est iure, itaque in maiores magni ipsum, consectetur ratione? Voluptatum, possimus? Reprehenderit magni delectus iusto!</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eius nesciunt nulla ut deserunt quisquam est iure, itaque in maiores magni ipsum, consectetur ratione? Voluptatum, possimus? Reprehenderit magni delectus iusto!</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eius nesciunt nulla ut deserunt quisquam est iure, itaque in maiores magni ipsum, consectetur ratione? Voluptatum, possimus? Reprehenderit magni delectus iusto!</p>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eius nesciunt nulla ut deserunt quisquam est iure, itaque in maiores magni ipsum, consectetur ratione? Voluptatum, possimus? Reprehenderit magni delectus iusto!</p>
+
+   <div class="teste2"></div>
+
+   <script>
+let $teste = document.querySelector(".teste");//Esta linha define uma variável $teste que recebe o elemento HTML que possui a classe .teste utilizando a função document.querySelector(). Isso significa que o elemento selecionado pelo seletor CSS .teste será atribuído à variável $teste.
+
+console.log("bg: ", $teste.style.background);
+
+console.log("computado: ", getComputedStyle($teste).background);//Esta linha imprime no console a propriedade background do elemento $teste usando a função getComputedStyle(). Essa função retorna o estilo computado do elemento, mesmo que o estilo tenha sido definido em um arquivo CSS.
+
+//Esta linha define uma variável $p que recebe o primeiro elemento HTML p da página e, em seguida, imprime no console sua altura (offsetHeight) e largura (offsetWidth), bem como a distância entre a borda do elemento e a borda superior e esquerda do seu elemento pai (offsetLeft e offsetTop).
+let $p = document.querySelector("p");
+console.log($p.offsetHeight, $p.offsetWidth);
+console.log($p.offsetLeft, $p.offsetTop);
+
+//Esta linha define uma variável $teste2 que recebe o elemento HTML que possui a classe .teste2 utilizando a função document.querySelector(). Em seguida, imprime no console a distância entre a borda do elemento e a borda superior e esquerda do seu elemento pai (offsetLeft e offsetTop).
+let $teste2 = document.querySelector(".teste2");
+console.log($teste2.offsetLeft, $teste2.offsetTop);
+
+//Esta linha imprime no console um objeto com informações sobre as dimensões e a posição do elemento $teste na página, como as distâncias entre suas bordas e a borda superior, inferior, esquerda e direita da janela (top, bottom, left e right) e a altura e largura do elemento (height e width). A função getBoundingClientRect() é muito útil para posicionar elementos dinamicamente na página.
+const rect = $teste.getBoundingClientRect();
+console.log("top:", rect.top, "right:", rect.right, "bottom:", rect.bottom, "left:", rect.left, "width:", rect.width, "height:", rect.height);
+
+   </script>
+</body>
+</html>
